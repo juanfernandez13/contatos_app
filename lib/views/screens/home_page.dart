@@ -1,3 +1,4 @@
+import 'package:contatos_app/views/widgets/custom_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -48,7 +49,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         child: TabBarView(
           controller: optionsController,
           children: [
-            Container(color: Colors.red,),
+            Container(color: Colors.red, child:Column(
+              children:[
+                 ListTileContato("jurertggggggggggggggggg", "(85) 98571-4993", true, path: "this.path",),
+                 ListTileContato("juan", "(85) 98571-4993", true),
+                 ListTileContato("juan", "(85) 98571-4993", true),
+                 ListTileContato("juan", "(85) 98571-4993", true),
+                 ListTileContato("juan", "(85) 98571-4993", true),
+                 ListTileContato("juan", "(85) 98571-4993", true),
+              ],
+            ),),
             Container(color: Colors.green,),
             Container(color: Colors.blue,),
           ],
