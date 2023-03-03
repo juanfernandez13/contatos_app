@@ -10,8 +10,7 @@ class Contato {
   String _dataDeNascimento = "";
   bool _favorito = false;
 
-  Contato(String nome, String telefone, String email, String cep, String cidade,
-      String uf, String endereco, String pathImg, String dataDeNascimento,bool favorito);
+  Contato(this._nome,this._telefone,this._email, this._cep, this._cidade,this._uf, this._endereco, this._dataDeNascimento,this._pathImg, this._favorito);
 
   String get nome => _nome;
   set nome(String nome) => _nome = nome;
