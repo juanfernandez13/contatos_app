@@ -1,3 +1,4 @@
+import 'package:contatos_app/views/screens/create_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -15,7 +16,7 @@ class DetailsContact extends StatelessWidget {
             appBar: AppBar(
               title: const Text("Detalhes"),
               actions: [
-                IconButton(onPressed: () {}, icon: const FaIcon(FontAwesomeIcons.pencil))
+                IconButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => CreatePage(contato))), icon: const FaIcon(FontAwesomeIcons.pencil))
               ],
             ),
             body: SizedBox(
