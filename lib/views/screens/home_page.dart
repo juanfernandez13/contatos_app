@@ -1,3 +1,4 @@
+import 'package:contatos_app/views/screens/create_page.dart';
 import 'package:contatos_app/views/widgets/custom_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
@@ -15,11 +16,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late TabController optionsController;
   final List<Contato> contatos = [
-    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "imagem", false),
-    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "", false),
-    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "imagem", true),
-    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "imagem", false),
-    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "", true),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "Eusébio", "CE", "Rua teste", "13/11/2002", "imagem", false),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "Eusébio", "CE", "Rua teste", "13/11/2002", "", false),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "Eusébio", "CE", "Rua teste", "13/11/2002", "imagem", true),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "Eusébio", "CE", "Rua teste", "13/11/2002", "imagem", false),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "Eusébio", "CE", "Rua teste", "13/11/2002", "", true),
     ];
 
   @override
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10)
         ),
-        onPressed: () {},
+        onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => CreatePage(Contato.vazio()))),
         child: const Icon(Icons.add),
       ),
       bottomNavigationBar: ConvexAppBar(
