@@ -15,11 +15,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late TabController optionsController;
   final List<Contato> contatos = [
-    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "imagem", false),
-    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "", false),
-    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "imagem", true),
-    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "imagem", false),
-    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "", true),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "imagem", false),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "", false),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "imagem", true),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "imagem", false),
+    Contato("Juan", "(88) 98888-8888", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "13/11/2002", "", true),
     ];
 
   @override
