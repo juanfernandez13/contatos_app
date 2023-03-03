@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../models/contato_model.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -12,6 +14,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late TabController optionsController;
+  final List<Contato> contatos = [
+    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "imagem", false),
+    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "", false),
+    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "imagem", true),
+    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "imagem", false),
+    Contato("Juan", "(85) 98571-4993", "email@email.com", "61760-000", "Eusébio", "CE", "Rua teste", "Sim", "", true),
+    ];
 
   @override
   void initState() {
@@ -51,12 +60,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           children: [
             Container(color: Colors.red, child:Column(
               children:[
-                 ListTileContato("jurertggggggggggggggggg", "(85) 98571-4993", true, path: "this.path",),
-                 ListTileContato("juan", "(85) 98571-4993", true),
-                 ListTileContato("juan", "(85) 98571-4993", true),
-                 ListTileContato("juan", "(85) 98571-4993", true),
-                 ListTileContato("juan", "(85) 98571-4993", true),
-                 ListTileContato("juan", "(85) 98571-4993", true),
+                 ListTileContato(contatos[0]),
+                 ListTileContato(contatos[1]),
+                 ListTileContato(contatos[2]),
+                 ListTileContato(contatos[3]),
+                 ListTileContato(contatos[4]),
               ],
             ),),
             Container(color: Colors.green,),
