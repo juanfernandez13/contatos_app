@@ -10,6 +10,7 @@ class Contato {
   bool _favorito = false;
 
   Contato(this._nome,this._telefone,this._email, this._cidade,this._uf, this._endereco, this._dataDeNascimento,this._pathImg, this._favorito);
+  Contato.vazio();
 
   String get nome => _nome;
   set nome(String nome) => _nome = nome;
