@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   convex_bottom_bar: ^3.2.0
   font_awesome_flutter: ^10.4.0
+  brasil_fields: ^1.10.0
 
 dev_dependencies:
   flutter_test:

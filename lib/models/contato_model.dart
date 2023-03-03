@@ -2,7 +2,6 @@ class Contato {
   String _nome = "";
   String _telefone = "";
   String _email = "";
-  String _cep = "";
   String _cidade = "";
   String _uf = "";
   String _endereco = "";
@@ -10,8 +9,8 @@ class Contato {
   String _dataDeNascimento = "";
   bool _favorito = false;
 
-  Contato(String nome, String telefone, String email, String cep, String cidade,
-      String uf, String endereco, String pathImg, String dataDeNascimento,bool favorito);
+  Contato(this._nome,this._telefone,this._email, this._cidade,this._uf, this._endereco, this._dataDeNascimento,this._pathImg, this._favorito);
+  Contato.vazio();
 
   String get nome => _nome;
   set nome(String nome) => _nome = nome;
@@ -19,8 +18,6 @@ class Contato {
   set telefone(String telefone) => _telefone = telefone;
   String get email => _email;
   set email(String email) => _email = email;
-  String get cep => _cep;
-  set cep(String cep) => _cep = cep;
   String get cidade => _cidade;
   set cidade(String cidade) => _cidade = cidade;
   String get uf => _uf;
@@ -38,7 +35,6 @@ class Contato {
     _nome = json['nome'];
     _telefone = json['telefone'];
     _email = json['email'];
-    _cep = json['cep'];
     _cidade = json['cidade'];
     _uf = json['uf'];
     _endereco = json['endereco'];
@@ -52,7 +48,6 @@ class Contato {
     data['nome'] = _nome;
     data['telefone'] = _telefone;
     data['email'] = _email;
-    data['cep'] = _cep;
     data['cidade'] = _cidade;
     data['uf'] = _uf;
     data['endereco'] = _endereco;
